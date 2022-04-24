@@ -35,9 +35,9 @@ class App extends React.Component {
 
   /*Write an addStudent method here*/
   addStudent(studentName){
-    const students= [...this.state.students,studentName]
+    const student= [...this.state.students,studentName]
     this.setState({
-      students
+      students: student
     })
   }
 
@@ -69,16 +69,16 @@ class App extends React.Component {
 
     /* Change below to render students*/
 
-    /*if (this.state.buttonClicked === "students") {
+    if (this.state.buttonClicked === "students") {
       tabChoice = (
         <List
-          placeholder="Add Assignment..." 
-          currList={this.state.assignments}
-          addFunction={this.addAssignment}
+          placeholder= {this.state.students} 
+          currList={this.state.students}
+          addFunction={this.addStudent}
           title="Student Roster"
         />
       );
-    }*/
+    }
 
     /* Uncomment lines below to render grades*/
     /*if (this.state.buttonClicked === "grades") {
